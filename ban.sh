@@ -21,7 +21,7 @@ wget -qO- https://www.gstatic.com/ipranges/cloud.json -O $GCP_IP_RANGES_FILE
 
 # Extract IPV4 and IPV6 ranges
 AWS_IP_RANGES=`jq -r '.prefixes[].ip_prefix, .ipv6_prefixes[].ipv6_prefix' $AWS_IP_RANGES_FILE`
-GCP_IP_RANGES=`grep -Po '"ipv.*": *"\K[^"]*' GCP_IP_RANGES_FILE`
+GCP_IP_RANGES=`grep -Po '"ipv.*": *"\K[^"]*' $GCP_IP_RANGES_FILE`
 
 # Ban extracted ranges with bicoin-cli using BAN_TIME
 for RANGE in $AWS_IP_RANGES; do
