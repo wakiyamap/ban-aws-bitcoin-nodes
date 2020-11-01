@@ -15,12 +15,12 @@ sudo apt-get install jq
 
 ## Download and use the script
 
-`git clone https://github.com/iioch/ban-aws-bitcoin-nodes.git`
+`git clone https://github.com/wakiyamap/ban-aws-gcp-bitcoin-nodes.git`
 
 Run:
 
 ````
-cd ban-aws-bitcoin-nodes   
+cd ban-aws-gcp-bitcoin-nodes
 chmod u+x ban.sh   
 ./ban.sh
 ````
